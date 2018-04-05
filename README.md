@@ -1,6 +1,5 @@
 # Object-Pool
 *Object-Pool* is simple module for Corona for reusing objects instead of creating new ones. It is inspired by [GBC Object Pool](https://marketplace.coronalabs.com/corona-plugins/gbc-object-pool) module by John Schumacher.
-![Screenshot](https://i.imgur.com/qWnANsq.gif)
 
 ### Run
 
