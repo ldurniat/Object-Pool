@@ -18,26 +18,20 @@
 	-- Create pool with Text Objects
 	local textPool = objectpool.init( createObject, 30 )
 
-	local function putIntoPool( object )
-
-		-- We don't need it now
-	    textPool:put( object )
-
-	end
-
 	local function addTextObject()
 
 		-- Get Text Object from pool
-		local text = textPool:get()
+		local text = textPool.get()
 
-		-- Check if we get object or nil
+		-- We need check get object or nil
 		if text then
 
 			transition.to( text, 
 				{ 	
 					x=math.random( display.contentWidth ), 
 					y=math.random( display.contentHeight ), 
-					onComplete=putIntoPool
+					-- We don't need object more
+					onComplete=textPool.put
 				}
 			)
 
